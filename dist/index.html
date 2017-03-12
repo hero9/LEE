@@ -4,17 +4,350 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Полигон инженерного предпринимательства</title>
 
-  <link rel="stylesheet" href="css/libs.min.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/libs.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/jquery.bxslider.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="js/libs.min.js"></script>
 
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+  	$("#top_mnu").on("click","a", function (event) {
+  		//отменяем стандартную обработку нажатия по ссылке
+  		event.preventDefault();
+
+  		//забираем идентификатор бока с атрибута href
+  		var id  = $(this).attr('href'),
+
+  		//узнаем высоту от начала страницы до блока на который ссылается якорь
+  			top = $(id).offset().top;
+
+  		//анимируем переход на расстояние - top за 1500 мс
+  		$('body,html').animate({scrollTop: top}, 1500);
+  	});
+  });
+
+  </script>
 </head>
 <body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-5">
+          <div class="logo_wrap">
+            <a href="#" class="logo">
+              <img src="img/poligon-logo.png" alt="Полигон инженерного предпринимательства">
+            </a>
+          </div>
+          <nav id="top_mnu">
+            <ul>
+              <li><a href="#hero">ГЛАВНАЯ</a></li>
+              <li><a href="#closest-events" class="active">ПРОГРАММЫ</a></li>
+              <li><a href="#footer">КОНТАКТЫ</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-6 col-sm-5 col-xs-6 top_text">
+          <p>Развиваем сообщество молодых предпринимателей: проводим образовательные программы и встречи с представителями бизнеса</p>
+            <button type="button" name="button" class="btn btn-small">Подобрать программу</button>
+        </div>
+        <div class="col-md-2">
+          <div class="top_right_logo">
+            <a href="#"class="tpu_logo">
+              <img src="img/tpu-logo.png" alt="Логотип ТПУ">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section id="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="slideTitle">
+            <h1>Полигон инженерного предпринимательства ТПУ</h1>
+          </div>
+          <div class="slideText">
+            <p>Сообщество, в котором начинающие предприниматели учатся у опытных. Станьте его частью и превратите свои мечты в реальный бизнес.</p>
+          </div>
+            <button type="button" name="button" class="btn btn-lg">Зарегистрироваться на программу</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="closest-events">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Регистрируйтесь на ближайшие программы</h2>
+          <ul class="bxslider">
+            <li id="first-event">
+              <h3>Предпринимательский вызов</h3>
+              <h4>Стартовая двухдневная программа для поиска и тестирования предпринимательской идеи на реализуемость. Приглашаем участников с бизнес-идеями и без.</h4>
 
-  Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Использовало снова lorem все бросил, заголовок рекламных напоивший толку рукопись даль гор, рыбными языком, ее всеми алфавит буквенных пунктуация прямо!
+              <div id="date-place">
+                <div id="left-div">
+                  <div class="left_image"><img src="img/calendar.png" alt="Calendar Icon"></div>
+                  <div class="right_text">12-13 декабря 2016 (проводится 2 раза в месяц)</div>
+                </div>
+                <div id="right-div">
+                  <div class="left_image"><img src="img/location.png" alt="Location Icon"></div>
+                  <div class="right_text move_down_text">Белинского 51, 309</div>
+               </div>
+              </div>
+              <button type="button" name="button" class="btn btn-lg btn-reg">Зарегистрироваться</button>
+            </li>
+            <li id="sec-event">
+              <h3>Школа продвижения</h3>
+              <h4>26 января</h4>
+              <button type="button" name="button" class="btn btn-lg btn-reg">Зарегистрироваться</button>
+            </li>
+            <li id="third-event">
+              <h3>В шаге от бизнеса</h3>
+              <h4>26 января</h4>
+              <button type="button" name="button" class="btn btn-lg btn-reg">Зарегистрироваться</button>
+            </li>
+          </ul>
 
-  <script src="js/libs.min.js"></script>
+          <div id="bx-pager">
+            <a data-slide-index="0" href=""><img src="img/slide-one.png" /></a>
+            <a data-slide-index="1" href=""><img src="img/slide-two.png" /></a>
+            <a data-slide-index="2" href=""><img src="img/slide-three.png" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Полигон помогает осуществить ваши бизнес-идеи</h2>
+        </div>
+        <div class="col-sm-3 col-md-3">
+          <h4>Тестирование идеи и выход на первые продажи</h4>
+          <p>Сформируйте стратегию выхода на рынок, а мы проверим и усилим ее</p>
+        </div>
+        <div class="col-sm-3 col-md-3">
+          <h4>Подбор команды</h4>
+          <p>Соберите команду на свой проект или станьте неазаменимой частью действующего</p>
+        </div>
+        <div class="col-sm-3 col-md-3">
+          <h4>Сообщество</h4>
+          <p>Получите обратную связь, контакты, идеи и другие ресурсы от предпринимателей и участников</p>
+        </div>
+        <div class="col-sm-3 col-md-3">
+          <h4>Финансирование</h4>
+          <p>Проработайте свой проект на программах и участвуйте в финальном конкурсе на получение финансирования</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features-two">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 col-md-4 box margin-right">
+          <span class="count">9</span>
+          <h4>программ</h4>
+          <p>проводятся каждый семестр, включая финальный конкурс на получение финансирования 10К</p>
+        </div>
+        <div class="col-sm-4 col-md-4 box margin-right">
+          <span class="count">50</span>
+          <h4>экспертов</h4>
+          <p>были приглашены на мероприятия Полигона: бизнесмены, маркетологи и управленцы, специалисты</p>
+        </div>
+        <div class="col-sm-4 col-md-4 box padding">
+          <span class="count">40</span>
+          <h4>проектов</h4>
+          <p>запущено за 4 года существования Полигона ИП</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="programs">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12">
+          <h2>Программы Полигона ИП</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-6">
+          <div class="event-item">
+            <h5><span>12 января,</span> один вечер</h5>
+            <a href="#">Кафе предпринимательства</a>
+            <p>Для знакомств, вдохновения и лайфхаков от спикера — действующего предпринимателя</p>
+          </div>
+          <div class="event-item">
+            <h5><span>12-13 января,</span> двухдневная программа</h5>
+            <a href="#">Предпринимательский вызов</a>
+            <p>Для тестирования своей бизнес-идеи на реализуемость; усиление и генерация новых идей</p>
+          </div>
+          <div class="event-item">
+            <h5>Двухдневная программа</h5>
+            <a href="#">В шаге от бизнеса</a>
+            <p>Для вывода проекта на первые продажи</p>
+          </div>
+          <div class="event-item grey-text">
+            <h5>Двухдневная программа</h5>
+            <a href="#">Школа продвижения бизнеса</a>
+            <p>Для создания стратегии продвижения бизнеса в интернете</p>
+          </div>
+          <div class="event-item grey-text">
+            <h5>Двухдневная программа</h5>
+            <a href="#">Школа управления бизнесом</a>
+            <p>Для управления всем бизнесом как проектом</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 second-list">
+          <div class="event-item grey-text">
+            <h5>Персональные консультации в удобное время</h5>
+            <a href="#">Лаборатория роста</a>
+            <p>Для работы над своим проектом вместе с экспертом из бизнеса</p>
+          </div>
+          <div class="event-item grey-text">
+            <h5>Двухдневная программа</h5>
+            <a href="#">Старт-ап школа по IT</a>
+            <p>Для развития проектов в области IT</p>
+          </div>
+          <div class="event-item grey-text pad-b">
+            <h5>Двухдневная программа</h5>
+            <a href="#">Старт-ап школа по промышленным технологиям</a>
+            <p>Для развития технологий ТПУ в области промышленного применения</p>
+          </div>
+          <div class="event-item grey-text">
+            <h5>Двухдневный конкурс</h5>
+            <a href="#">Конкурс 10К</a>
+            <p>Завершающий конкурс, проводится раз в год в декабре. Для получения финансирования на свой проект</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="test">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7 col-md-7">
+          <h2>Тест: насколько вы готовы стать предпринимателем?</h2>
+          <p>Пройдите тест и узнайте, какие компетенции у вас уже есть, а что нужно подтянуть. Мы подберем программу под ваш уровень.</p>
+          <div class="subscribe">
+            <form>
+
+              <input type="hidden" name="project_name" value="Полигон ТПУ">
+          		<input type="hidden" name="admin_email" value="almabek.galym@gmail.com">
+          		<input type="hidden" name="form_subject" value="Вы подписались на нашу рассылку">
+
+              <div class="group">
+                <input id="name" name="name" type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Введите своё имя</label>
+              </div>
+
+              <div class="group">
+                <input id="email" name="email" type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Введите свой Email</label>
+              </div>
+
+              <button type="button" name="button" class="btn btn-lg send-btn">Отправить</button>
+
+              <div class="squaredThree">
+                <input type="checkbox" value="None" id="squaredThree" name="check" checked />
+                <label for="squaredThree"></label>
+                <span>даю согласие на обработку своих персональных данных</span>
+              </div>
+
+            </form>
+          </div>
+        </div>
+        <div class="col-md-5"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 col-md-3 footer-reg">
+          <h4>Регистрируйтесь</h4>
+          <p>на ближайшие программы:</p>
+          <a href="#">Кафе предпринимателей</a>
+          <a href="#">Предпринимательский вызов</a>
+        </div>
+        <div class="col-sm-3 col-md-3 footer-add">
+          <h4>Присоединяйтесь</h4>
+          <p>к  <a href="#">каналу Полигина</a> в Телеграме</p>
+          <img src="img/icon_telegram.png" alt="Telegram Icon" class="telegram-icon">
+        </div>
+        <div class="col-sm-6 col-md-6">
+          <h4>Подписывайтесь</h4>
+          <p>на дайджест самых интересных программ Полигона ИП</p>
+          <div class="subscribe">
+            <form>
+
+          		<input type="hidden" name="project_name" value="Полигон ТПУ">
+          		<input type="hidden" name="admin_email" value="almabek.galym@gmail.com">
+          		<input type="hidden" name="form_subject" value="Вы подписались на нашу рассылку">
+
+              <div class="group margin-bt">
+                <input type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Введите своё имя</label>
+              </div>
+
+              <div class="group">
+                <input type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Введите свой Email</label>
+              </div>
+
+              <button type="button" name="button" class="btn btn-lg send-btn">Подписаться</button>
+
+              <div class="squaredThree">
+                <input type="checkbox" value="None" id="squaredThreeQ" name="check" checked />
+                <label for="squaredThreeQ"></label>
+                <span>даю согласие на обработку своих персональных данных</span>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-5 col-md-6">
+          <img src="img/poligon-logo-white.png" alt="Poligon Logo" class="pol-logo">
+          <img src="img/icon-vk.png" alt="VK Icon">
+          <img src="img/logo_insta.png" alt="Instagram Icon">
+          <p class="bottom-address">Усова 9/4, 201 (7 корпус ТПУ) Тел.: 701-777, внутренний: 1808</p>
+        </div>
+        <div class="col-sm-5 col-md-4">
+          <p class="messangers">Полигон на связи в мессенджерах:</p>
+          <img src="img/icon_whatsapp.png" alt="Whatsapp Icon">
+          <img src="img/icon_viber.png" alt="Viber Icon">
+          <img src="img/icon_telegram.png" alt="Telegram Icon">
+          <a href="tel: +79234223922" class="bottom-tel">+7 (923) 422-39-22</a>
+        </div>
+        <div class="col-sm-2 col-md-2 footer-text">
+          <span>Разработано в Провокации</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <script src="js/common.js"></script>
 </body>
 </html>

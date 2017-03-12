@@ -1,0 +1,19 @@
+@font-face {
+	font-family: "ClearSans-Regular";
+	src: url("../fonts/ClearSans-Regular/ClearSans-Regular.eot");
+	src: url("../fonts/ClearSans-Regular/ClearSans-Regular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/ClearSans-Regular/ClearSans-Regular.woff") format("woff"),
+	url("../fonts/ClearSans-Regular/ClearSans-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "ClearSans-Bold";
+	src: url("../fonts/ClearSans-Bold/ClearSans-Bold.eot");
+	src: url("../fonts/ClearSans-Bold/ClearSans-Bold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/ClearSans-Bold/ClearSans-Bold.woff") format("woff"),
+	url("../fonts/ClearSans-Bold/ClearSans-Bold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
